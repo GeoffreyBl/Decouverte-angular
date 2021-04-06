@@ -13,33 +13,27 @@
                 (click)="validate()">{{newsletterInscription}}</button>
 
         </div>
-        <div class="col-sm-offset-2 col-sm-10">
+        <div class="col-sm-offset-2 col-sm-10" *ngIf="stats">
             <h1>Ludoweb en quelques chiffres</h1>
-            <div class="rowstats">
-                <h1>1</h1>
-                <p>prêt de jeux effectués</p>
+            <div>
+                <p>{{stats?.nbLoans}} prêt de jeux effectués</p>
             </div>
-            <div class="rowstats">
-                <h1>1</h1>
-                <p>ludothèques</p>
+            <div>
+                <p>{{stats.nbGames}} ludothèques</p>
             </div>
-            <div class="rowstats">
-                <h1>1</h1>
-                <p>utilisateurs</p>
+            <div>
+                <p>{{stats.nbUsers}} utilisateurs</p>
             </div>
-            <div class="rowstats">
-                <h1>1</h1>
-                <p>jeux enregistrés</p>
+            <div>
+                <p>{{stats.nbManagers}} jeux enregistrés</p>
             </div>
-            <div class="rowstats">
-                <h1>4</h1>
-                <p>jeux par utilisateur en moyenne</p>
+            <div>
+                <p>{{stats.nbUsers}} jeux par utilisateur en moyenne</p>
             </div>
-            <div class="rowstats">
-                <h1>4</h1>
-                <p>catégories différentes :</p>
+            <div>
+                <p>{{stats.categories.length}} catégories différentes :</p>
             </div>
-            <p>Puzzle, Jeu de plateau, Jeu de dés, Jeu de cartes</p>
+            <span *ngFor="let category of stats.categories">{{category}} </span>
         </div>
         <div class="col-sm-offset-2 col-sm-10">
             <h1>Les témoignages</h1>

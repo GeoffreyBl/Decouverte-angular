@@ -2,7 +2,7 @@
     <div class="col-sm-offset-2 col-sm-10">
         <h1>Voici la liste de tous les jeux</h1>
         <p>Filtrer par catégorie</p>
-        <select class="p-2 w-100 border rounded" name="filter" id="filter-select">
+        <select id="selectCategory" class="p-2 w-100 form-control border rounded" #categorySelected="ngModel" ngModel>
             <option value="">Toutes les catégories</option>
             <option value="1">Puzzle</option>
             <option value="2">Jeu de plateau</option>
@@ -10,7 +10,7 @@
             <option value="4">Jeu de cartes</option>
         </select>
         <div id="container_games">
-            
+
         </div>
     </div>
 </div>

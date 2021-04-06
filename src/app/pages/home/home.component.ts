@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Stats } from 'src/app/models/fakeStats';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-home',
@@ -6,14 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  
+  stats: Stats;
   buttonClicked = false;
-  mailNews;
+  mailNews = "";
   newsletterInscription = "Inscription à la newsletter";
   
-  constructor() { }
+  constructor(public apiService: ApiService){}
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.stats = await this.apiService.getFakeStat();
   }
   clickNewsletter(){
     this.buttonClicked = true;
