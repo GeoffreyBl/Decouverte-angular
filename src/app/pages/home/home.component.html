@@ -1,0 +1,53 @@
+<div class="banner"></div>
+<div class="container">
+    <div class="row" style="border: 1px, solid, black;">
+        <div class="col-sm-offset-2 col-sm-10 text-center">
+            <h1>Ludoweb</h1>
+            <p>Prétez et empruntez des jeux de société.</p>
+
+            <button type="button" class=" btn btn-primary" (click)="clickNewsletter()" *ngIf="!buttonClicked">Je
+                souhaite recevoir la
+                newsletter</button>
+            <input type="text" [(ngModel)]="mailNews" *ngIf="buttonClicked">
+            <button type="button" class=" btn btn-primary" *ngIf="buttonClicked"
+                (click)="validate()">{{newsletterInscription}}</button>
+
+        </div>
+        <div class="col-sm-offset-2 col-sm-10">
+            <h1>Ludoweb en quelques chiffres</h1>
+            <div class="rowstats">
+                <h1>1</h1>
+                <p>prêt de jeux effectués</p>
+            </div>
+            <div class="rowstats">
+                <h1>1</h1>
+                <p>ludothèques</p>
+            </div>
+            <div class="rowstats">
+                <h1>1</h1>
+                <p>utilisateurs</p>
+            </div>
+            <div class="rowstats">
+                <h1>1</h1>
+                <p>jeux enregistrés</p>
+            </div>
+            <div class="rowstats">
+                <h1>4</h1>
+                <p>jeux par utilisateur en moyenne</p>
+            </div>
+            <div class="rowstats">
+                <h1>4</h1>
+                <p>catégories différentes :</p>
+            </div>
+            <p>Puzzle, Jeu de plateau, Jeu de dés, Jeu de cartes</p>
+        </div>
+        <div class="col-sm-offset-2 col-sm-10">
+            <h1>Les témoignages</h1>
+
+        </div>
+        <div class="col-sm-offset-2 col-sm-10">
+            <h1>Les derniers jeux ajoutés</h1>
+            <app-games></app-games>
+        </div>
+    </div>
+</div>

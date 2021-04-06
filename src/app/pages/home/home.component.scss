@@ -1,0 +1,15 @@
+.banner{
+    background-image: url("http://ludo.les-combien.com/assets/images/games.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100%;
+    background-position: 50% 60%;
+    height: 300px;
+}
+.rowchiffre{
+    display: flex;
+    align-items: center;
+    h1{
+        margin-right: 10px;
+    }
+}
